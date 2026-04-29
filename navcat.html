@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/estilos.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+
+/* Opcional: mejora visual */
+.dropdown-toggle::after {
+  margin-left: .4em;
+}
+
+/* Posición del submenú */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-left: 0.1rem;
+  margin-top: -0.1rem;
+}
+/* Añadir flecha a los elementos con submenú */
+.dropdown-submenu > a::after {
+  float: right;
+  margin-left: 5px;
+}
+
+</style>
+
+  </head>
+<body>
+      <header>
+
+      <!-- NAVBAR -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-nav">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html"><img class="img_logo" src="/assets/imgs/logo mey.png" alt="Logo mey detalles"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" style="margin-right:8px;">
+                    <path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/>
+                  </svg>
+                  Arreglos Florales
+                </a>
+                <ul class="dropdown-menu bg-nav" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item colornav" href="/paginas/ArrRamos.html">Ramos</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item colornav" href="#">Fechas Especiales</a></li>
+                  <li><a class="dropdown-item" href="/paginas/ArrFrutal.html">Arreglos frutales</a></li>
+                  <li><a class="dropdown-item" href="#">Flores Amarillas</a></li>
+                  <li><a class="dropdown-item" href="#">Hot Wheels</a></li>
+                  <li><a class="dropdown-item" href="#">San Valentín (Día del Amor y la Amistad)</a></li>
+                  <li><a class="dropdown-item" href="#">Día de la Madre</a></li>
+                  <li><a class="dropdown-item" href="#">Día del Padre</a></li>
+                  <li><a class="dropdown-item" href="#">Halloween</a></li>
+                  <li><a class="dropdown-item" href="#">Día de Muertos</a></li>
+                  <li><a class="dropdown-item" href="#">Navidad</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item colornav" href="/paginas/ArrfloFuneral.html">Arreglos para condolencias</a></li>
+                </ul>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Decoraciones</a>
+                    <ul class="dropdown-menu bg-nav" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item colornav" href="/paginas/Arrparabodas.html">Bodas</a></li>
+                      <li><a class="dropdown-item colornav" href="/paginas/Decoracion_eventos.html">Decoraciones</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item colornav" href="#">Cumpleaños</a></li>
+                          <li><a class="dropdown-item" href="/paginas/Arr15años.html">15 Años</a></li>
+                          <li><a class="dropdown-item" href="/paginas/ArrDecparaniños.html">Decoración para niño</a></li>
+                          <li><a class="dropdown-item" href="/paginas/ArrDecparaniña.html">Decoración para niña</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item colornav" href="#">Grados y Bautizos</a></li>
+                          <li><a class="dropdown-item" href="/paginas/ArrDecBautizo.html">Bautizo</a></li>
+                          <li><a class="dropdown-item" href="/paginas/ArrDecPrimeracomunion.html">Primera Comunión</a></li>
+                          <li><a class="dropdown-item" href="/paginas/ArrDecGraduaciones.html">Graduaciones</a></li>
+                          <li><a class="dropdown-item" href="/paginas/Arrbabyshower.html">Baby Shower</a></li>
+                          <li><a class="dropdown-item" href="/paginas/Arrparasantos.html">Decoraciones para Santos</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Alquiler de Mobiliario</a>
+                    <ul class="dropdown-menu bg-nav" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item colornav" href="#">Sillas</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item colornav" href="#">Mesas</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item colornav" href="#">Mantelería</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Presentaciones con Ositos</a>
+                    <ul class="dropdown-menu bg-nav" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item colornav" href="#">Osos Cielitos</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item colornav" href="#">Ositos Mariachis</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item colornav" href="#">El cuysito Munaysito</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Detalles</a>
+                    <ul class="dropdown-menu bg-nav" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item colornav" href="/paginas/ArrCentrosdemesa.html">Centros de mesa</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item colornav" href="/paginas/CajaDesayuno.html">Desayunos</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item colornav" href="#">Detalles personalizados</a></li>
+                          <li><a class="dropdown-item" href="#">15 Años</a></li>
+                          <li><a class="dropdown-item" href="#">Decoracion para niño</a></li>
+                          <li><a class="dropdown-item" href="#">Decoracion para niña</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item colornav" href="#">Rosas Eternas</a></li>
+                    </ul>
+                </li>
+              </li>
+            </ul>
+
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="🔍Buchones" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      
+    </header>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

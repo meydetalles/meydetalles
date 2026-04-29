@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/estilos.css">
+    <title>Mey Detalles</title>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/assets/imgs/favicon_io/android-chrome-512x512.png" type="image/x-icon">
+
+    <meta name="theme-color" content="#7952b3">
+    <link href="carousel.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+      <!-- NAVBAR -->
+      <!-- contenedor donde se insertará el navbar -->
+    <div id="navbar-container"></div>
+
+        <script>
+          fetch('/navcat.html')
+            .then(response => response.text())
+            .then(data => {
+              document.getElementById('navbar-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error cargando el navbar:', error));
+        </script>
+    </header>
+
+<!-- Imagen principal tipo banner -->
+<section class="text-center mb-5">
+    <img src="https://drive.google.com/thumbnail?id=1lseUGpvm9VthBdW81am9yMdZJYHsnTU2&sz=w2000" 
+         alt="Imagen principal" 
+         class="img-fluid w-100" 
+         style="object-fit: cover; max-height: 400px;">
+</section>
+
+<!-- Catálogo en Cards -->
+<section class="container">
+    <h2 class="text-center mb-4">Desayunos</h2>
+  <div class="row g-4">
+
+      <!-- Modelo 1 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1nI64JLv8oMHfeMwvOT85sBd8yZmqFIRq&sz=w2000" loading="lazy" class="card-img-top" alt="CajaDesayuno1">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Desayuno 1</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Desayuno 1', 'https://drive.google.com/thumbnail?id=1nI64JLv8oMHfeMwvOT85sBd8yZmqFIRq&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 2 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1FeLDtVHttBh9w0EKs3bv6N4T7vjsEKLD&sz=w2000" loading="lazy" class="card-img-top" alt="Desayuno2">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Desayuno 2</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Desayuno 2', 'https://drive.google.com/thumbnail?id=1FeLDtVHttBh9w0EKs3bv6N4T7vjsEKLD&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 3 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1zYBTBnrZ7o0oTtpU6jbmuLbXkX3jjbY3&sz=w2000" loading="lazy" class="card-img-top" alt="D3">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Desayuno 3</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Desayuno 3', 'https://drive.google.com/thumbnail?id=1zYBTBnrZ7o0oTtpU6jbmuLbXkX3jjbY3&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 4 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1PuZdZ4ggk1LFTq4-35-NReG3_vc40WNG&sz=w2000" loading="lazy" class="card-img-top" alt="D4">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Desayuno 4</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Desayuno 4', 'https://drive.google.com/thumbnail?id=1PuZdZ4ggk1LFTq4-35-NReG3_vc40WNG&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <br>
+
+  <div class="row g-4">
+
+      <!-- Modelo 5 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1-ykOBzGOX1FeP9DxS-lQjcdCWxv7IL3v&sz=w2000" loading="lazy" class="card-img-top" alt="D5">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Desayuno 5</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Desayuno 5', 'https://drive.google.com/thumbnail?id=1-ykOBzGOX1FeP9DxS-lQjcdCWxv7IL3v&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 6 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=10zFr1NYlwWdTj3m8JVNG143IVMo0b7b_&sz=w2000" loading="lazy" class="card-img-top" alt="D6">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Desayuno 6</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Desayuno 6', 'https://drive.google.com/thumbnail?id=10zFr1NYlwWdTj3m8JVNG143IVMo0b7b_&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 7 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1a1LvfHMT6R2UMLqQUkefmH_6IilaVjBR&sz=w2000" loading="lazy" class="card-img-top" alt="D7">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Desayuno 7</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Desayuno 7', 'https://drive.google.com/thumbnail?id=1a1LvfHMT6R2UMLqQUkefmH_6IilaVjBR&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 8 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1lurmvQkvfNhHGltSKcfC3YRjdssXDl--&sz=w2000" loading="lazy" class="card-img-top" alt="D8">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Desayuno 8</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Desayuno 8', 'https://drive.google.com/thumbnail?id=1lurmvQkvfNhHGltSKcfC3YRjdssXDl--&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+  </div>
+
+    <br>
+
+  <div class="row g-4">
+
+      <!-- Modelo 9 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1t7oZyI4zYkrFa7BzUJ0NjSm41Q21Q4NS&sz=w2000" loading="lazy" class="card-img-top" alt="D9">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Desayuno 9</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Desayuno 9', 'https://drive.google.com/thumbnail?id=1t7oZyI4zYkrFa7BzUJ0NjSm41Q21Q4NS&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 10 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1Hw9xwie32ZrkqLRyIZLBzOhuQx0ORtXb&sz=w2000" loading="lazy" class="card-img-top" alt="CM10">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Desayuno 10</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Desayuno 10', 'https://drive.google.com/thumbnail?id=1Hw9xwie32ZrkqLRyIZLBzOhuQx0ORtXb&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 11 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1yE6ltZfPuRA4lQUFC5wyVPG8q7_QmqE1&sz=w2000" loading="lazy" class="card-img-top" alt="D11">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Desayuno 11</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Desayuno 11', 'https://drive.google.com/thumbnail?id=1yE6ltZfPuRA4lQUFC5wyVPG8q7_QmqE1&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 12 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1n5f-L45Bj61iwRSvQe2_fJ4jw4nCaccC&sz=w2000" loading="lazy" class="card-img-top" alt="D12">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Desayuno 12</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Desayuno 12', 'https://drive.google.com/thumbnail?id=1n5f-L45Bj61iwRSvQe2_fJ4jw4nCaccC&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+  </div>
+    <br>
+
+  <div class="row g-4">
+
+      <!-- Modelo 13 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1ByO2ri2LejVbOc-fRPsvItzHdKFL3Zqj&sz=w2000" loading="lazy" class="card-img-top" alt="D13">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Desayuno 13</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Desayuno 13', 'https://drive.google.com/thumbnail?id=1ByO2ri2LejVbOc-fRPsvItzHdKFL3Zqj&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 14 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1f7SUgaxAFT9jnZgl9cks-JpK6OeK_xCp&sz=w2000" loading="lazy" class="card-img-top" alt="D14">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Desayuno 14</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Desayuno 14', 'https://drive.google.com/thumbnail?id=1f7SUgaxAFT9jnZgl9cks-JpK6OeK_xCp&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 15 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=161K9Ym7nurkXQVJaLU7EaZB5n1XM_alt&sz=w2000" loading="lazy" class="card-img-top" alt="D15">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Desayuno 15</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Desayuno 15', 'https://drive.google.com/thumbnail?id=161K9Ym7nurkXQVJaLU7EaZB5n1XM_alt&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 16 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1NP3DOL5rwXPFrrm2H3p7KhbVNqglWmOz&sz=w2000" loading="lazy" class="card-img-top" alt="D16">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Desayuno 16</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Desayuno 16', 'https://drive.google.com/thumbnail?id=1NP3DOL5rwXPFrrm2H3p7KhbVNqglWmOz&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+  </div>
+    <br>
+
+  <div class="row g-4">
+
+      <!-- Modelo 17 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1Rbrgxkje4J2BzEjLH3Y2-2pTM-Yq0_N6&sz=w2000" loading="lazy" class="card-img-top" alt="D17">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Desayuno 17</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Desayuno 17', 'https://drive.google.com/thumbnail?id=1Rbrgxkje4J2BzEjLH3Y2-2pTM-Yq0_N6&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 18 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=10soc1L50eCm36ih9QrrOLStdykqKnJF1&sz=w2000" loading="lazy" class="card-img-top" alt="D18">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Desayuno 18</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Desayuno 18', 'https://drive.google.com/thumbnail?id=10soc1L50eCm36ih9QrrOLStdykqKnJF1&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 19 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=18i3fsEdH105SOkK1HKN3u0h387i8GbZU&sz=w2000" loading="lazy" class="card-img-top" alt="D19">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Desayuno 19</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Desayuno 19', 'https://drive.google.com/thumbnail?id=18i3fsEdH105SOkK1HKN3u0h387i8GbZU&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 20 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1z4OAWdqggXbnMhldVs-4mBbSPMopgpao&sz=w2000" loading="lazy" class="card-img-top" alt="D20">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Desayuno 20</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Desayuno 20', 'https://drive.google.com/thumbnail?id=1z4OAWdqggXbnMhldVs-4mBbSPMopgpao&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+  </div>
+    <br>
+
+  <div class="row g-4">
+
+      <!-- Modelo 21 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1S2rUASQUcNDQUU_ybD9fM0Pgbt665SRr&sz=w2000" loading="lazy" class="card-img-top" alt="D21">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Desayuno 21</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Desayuno 21', 'https://drive.google.com/thumbnail?id=1S2rUASQUcNDQUU_ybD9fM0Pgbt665SRr&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 22 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1zLc2fhT2WlmeFmjbDVzyGMjYVjVFlN4C&sz=w2000" loading="lazy" class="card-img-top" alt="D22">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Desayuno 22</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Desayuno 22', 'https://drive.google.com/thumbnail?id=1zLc2fhT2WlmeFmjbDVzyGMjYVjVFlN4C&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+            <!-- Modelo 23 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1H440Z1GvBWBGnZ5L_sfWHgL7hr2vW4Le&sz=w2000" loading="lazy" class="card-img-top" alt="CM23">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Desayuno 23</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Desayuno 23', 'https://drive.google.com/thumbnail?id=1H440Z1GvBWBGnZ5L_sfWHgL7hr2vW4Le&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 24 -->
+      <!-- <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=18thWxuJwaPZGyCnuNZ7cdvuV5kCigJ2H&sz=w2000" loading="lazy" class="card-img-top" alt="CM24">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 24</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 24', 'https://drive.google.com/thumbnail?id=18thWxuJwaPZGyCnuNZ7cdvuV5kCigJ2H&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+  </div> -->
+    <br>
+
+  <div class="row g-4">
+
+
+</section>
+
+    <!-- Botón flotante WhatsApp -->
+      <div id="whatsapp-container"></div>
+
+      <script>
+        // Cargar el botón flotante con fetch
+        fetch('/whatsapp.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('whatsapp-container').innerHTML = data;
+          })
+          .catch(error => console.error('Error al cargar WhatsApp:', error));
+      </script>
+
+<!-- Footer -->
+<div id="footer-container"></div>
+<script>
+  fetch('../footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-container').innerHTML = data;
+    });
+</script>
+
+
+<script>
+  function enviarWhatsApp(modelo, imagenUrl) {
+    const numero = "593992638356"; // Tu número sin el "+"
+    
+    // Si la imagen ya es un enlace completo, úsala tal cual
+    const linkImagen = imagenUrl.startsWith("http") 
+      ? imagenUrl 
+      : window.location.origin + imagenUrl;
+
+    // Mensaje con formato bonito para WhatsApp
+    const mensaje = 
+      `(✿◡‿◡) *Hola, estoy interesado en el ${modelo}.*\n` +
+      `⚆_⚆ Puedes ver la imagen aquí:\n${linkImagen}`;
+
+    // Crear el enlace de WhatsApp
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+    
+    // Abrir WhatsApp en una nueva pestaña
+    window.open(url, "_blank");
+  }
+</script>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+        crossorigin="anonymous"></script>
+</body>
+</html>

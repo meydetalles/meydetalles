@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/estilos.css">
+    <title>Mey Detalles</title>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/assets/imgs/favicon_io/android-chrome-512x512.png" type="image/x-icon">
+
+    <meta name="theme-color" content="#7952b3">
+    <link href="carousel.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+      <!-- NAVBAR -->
+      <!-- contenedor donde se insertará el navbar -->
+    <div id="navbar-container"></div>
+
+        <script>
+          fetch('/navcat.html')
+            .then(response => response.text())
+            .then(data => {
+              document.getElementById('navbar-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error cargando el navbar:', error));
+        </script>
+    </header>
+
+<!-- Imagen principal tipo banner -->
+<section class="text-center mb-5">
+    <img src="https://drive.google.com/thumbnail?id=14lQr1m9cKt9ELq0Zs33nUsBXonOVYbZx&sz=w2000"
+         alt="Imagen principal" 
+         class="img-fluid w-100" 
+         style="object-fit: cover; max-height: 400px;">
+</section>
+
+<!-- Catálogo en Cards -->
+<section class="container">
+    <h2 class="text-center mb-4">Decoracion para niña</h2>
+  <div class="row g-4">
+
+    <!-- Decoración 1 -->
+<section class="container my-5">
+
+
+  <div id="carouselDecoraciones1" class="carousel slide shadow rounded overflow-hidden" data-bs-ride="carousel">
+
+    <!-- IMÁGENES -->
+    <div class="carousel-inner">
+
+      <!-- ITEM 1 -->
+      <div class="carousel-item active">
+        <img
+          src="https://drive.google.com/thumbnail?id=17US1R1xyA5lP8Xq8WOi2lhXbWXUUThPD&sz=w2000"
+          class="d-block w-100 img-carrusel-vertical"
+          alt="Decoración Religiosa Altar Especial">
+      </div>
+
+      <!-- ITEM 2 -->
+      <div class="carousel-item">
+        <img
+          src="https://drive.google.com/thumbnail?id=1rUmioZUKwkLHr_DMEmvTCYsJuLdVcZBN&sz=w2000"
+          class="d-block w-100 img-carrusel-vertical"
+          alt="Decoración Religiosa Iluminación">
+      </div>
+
+      <!-- ITEM 3 -->
+      <div class="carousel-item">
+        <img
+          src="https://drive.google.com/thumbnail?id=1XqN-TyDCww7VzeP2mdJrIb6ItHadvyyZ&sz=w2000"
+          class="d-block w-100 img-carrusel-vertical"
+          alt="Decoración Religiosa Flores y Telón">
+      </div>
+            <!-- ITEM 4 -->
+      <div class="carousel-item">
+        <img
+          src="https://drive.google.com/thumbnail?id=1yDqt_-huj06v1gGWwEWZg7cxc-GLQbT7&sz=w2000"
+          class="d-block w-100 img-carrusel-vertical"
+          alt="Decoración Religiosa Iluminación">
+      </div>
+
+      <!-- ITEM 5 -->
+      <div class="carousel-item">
+        <img
+          src="https://drive.google.com/thumbnail?id=1S6CY2LZ767Rxoyjj9pPYMa3Eem7yiBdm&sz=w2000"
+          class="d-block w-100 img-carrusel-vertical"
+          alt="Decoración Religiosa Flores y Telón">
+      </div>
+            <!-- ITEM 6 -->
+      <div class="carousel-item">
+        <img
+          src="https://drive.google.com/thumbnail?id=15oXN1PhLX8p5Hk9cn2M9bcqznO4-PB60&sz=w2000"
+          class="d-block w-100 img-carrusel-vertical"
+          alt="Decoración Religiosa Iluminación">
+      </div>
+
+      <!-- ITEM 7 -->
+      <div class="carousel-item">
+        <img
+          src="https://drive.google.com/thumbnail?id=1lI6S51jQRSJA6TtUFPi1xzz8q8N-i0RJ&sz=w2000"
+          class="d-block w-100 img-carrusel-vertical"
+          alt="Decoración Religiosa Flores y Telón">
+      </div>
+    </div>
+
+    <!-- CONTROLES -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselDecoraciones1" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselDecoraciones1" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+
+  </div>
+
+<!-- DECORACIÓN -->
+<div class="card mt-4 shadow-sm">
+    <div class="card-body text-center">
+      <h4 class="card-title">Decoración para niña #1 – Fiesta Glam Barbie de Jade</h4>
+      <p class="card-text">
+        Ambientación completa temática de Barbie con arco de globos orgánicos en tonos rosa, blanco y plateado, fondo brillante púrpura con caja de fotos gigante, pedestales personalizados y soporte para pastel. ¡Ideal para fiestas infantiles llenas de glamour y fotos inolvidables!
+      </p>
+
+      <ul class="list-unstyled">
+        <li>🎈 Arco de globos orgánicos rosa, blanco y plateado (Barbie, corona y más)</li>
+        <li>📸 Caja de fotos Barbie gigante con flecos</li>
+        <li>🏛️ Pedestales cilíndricos con "Jade" y logo Barbie</li>
+        <li>✨ Cortina púrpura brillante y micrófonos disco</li>
+        <li>🎂 Soporte multi-nivel para pastel</li>
+        <li>🎀 Numerales "8" plateados luminosos</li>
+      </ul>
+
+      <button class="btn btn-success"
+        onclick="enviarWhatsApp(
+         'Decoración Fiesta Glam Barbie de Jade #1 – Cumpleaños 8 Años',
+         'https://drive.google.com/thumbnail?id=1rUmioZUKwkLHr_DMEmvTCYsJuLdVcZBN&sz=w2000'
+        )">
+        Cotizar por WhatsApp
+      </button>
+    </div>
+</div>
+
+</section>
+
+    <!-- Decoración 1-->
+ 
+      <!-- Modelo 2 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1voY4rJpXyW6NN5gYJpJhKr1AWwoE_QEd&sz=w2000" loading="lazy" class="card-img-top" alt="CajaDesayuno1">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Decoración para niña #2</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Decoración para niña #2', 'https://drive.google.com/thumbnail?id=1voY4rJpXyW6NN5gYJpJhKr1AWwoE_QEd&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 3 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1SekH4o1kdCa1m0VZrdsxWy1acT8tL3gk&sz=w2000" loading="lazy" class="card-img-top" alt="Desayuno2">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Decoración para niña #3</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Decoración para niña #3', 'https://drive.google.com/thumbnail?id=1SekH4o1kdCa1m0VZrdsxWy1acT8tL3gk&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 4 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1EOuSg7l1Mjm3_D99tNPdbsW9fV9woMqD&sz=w2000" loading="lazy" class="card-img-top" alt="D3">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Decoración para niña #4</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Decoración para niña #4', 'https://drive.google.com/thumbnail?id=1EOuSg7l1Mjm3_D99tNPdbsW9fV9woMqD&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 5 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1a9cPSR6glxT9UqF50odBWwe_6cJOYtsX&sz=w2000" loading="lazy" class="card-img-top" alt="D4">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Decoración para niña #5</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Decoración para niña #5', 'https://drive.google.com/thumbnail?id=1a9cPSR6glxT9UqF50odBWwe_6cJOYtsX&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+            <!-- Modelo 6 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1FBet_gmS9ZtVsmnydlMGt1Rhpul-5hUX&sz=w2000" loading="lazy" class="card-img-top" alt="D4">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Decoración para niña #6</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Decoración para niña #6', 'https://drive.google.com/thumbnail?id=1FBet_gmS9ZtVsmnydlMGt1Rhpul-5hUX&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+            <!-- Modelo 7 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1853MsDoF3EXI4WCd2UBZc4IBlFETPE4w&sz=w2000" loading="lazy" class="card-img-top" alt="D4">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Decoración para niña #7</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Decoración para niña #7', 'https://drive.google.com/thumbnail?id=1853MsDoF3EXI4WCd2UBZc4IBlFETPE4w&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+            <!-- Modelo 8 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1EeGZezkOMLg2n2pYkCZFm6O2bjX0uTg8&sz=w2000" loading="lazy" class="card-img-top" alt="D4">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Decoración para niña #8</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Decoración para niña #8', 'https://drive.google.com/thumbnail?id=1EeGZezkOMLg2n2pYkCZFm6O2bjX0uTg8&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+  <br>
+
+  <div class="row g-4">
+</section>
+
+    <!-- Botón flotante WhatsApp -->
+      <div id="whatsapp-container"></div>
+
+      <script>
+        // Cargar el botón flotante con fetch
+        fetch('/whatsapp.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('whatsapp-container').innerHTML = data;
+          })
+          .catch(error => console.error('Error al cargar WhatsApp:', error));
+      </script>
+
+<!-- Footer -->
+<div id="footer-container"></div>
+<script>
+  fetch('../footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-container').innerHTML = data;
+    });
+</script>
+
+
+<script>
+  function enviarWhatsApp(modelo, imagenUrl) {
+    const numero = "593992638356"; // Tu número sin el "+"
+    
+    // Si la imagen ya es un enlace completo, úsala tal cual
+    const linkImagen = imagenUrl.startsWith("http") 
+      ? imagenUrl 
+      : window.location.origin + imagenUrl;
+
+    // Mensaje con formato bonito para WhatsApp
+    const mensaje = 
+      `(✿◡‿◡) *Hola, estoy interesado en la ${modelo}.*\n` +
+      `⚆_⚆ Puedes ver la imagen aquí:\n${linkImagen}`;
+
+    // Crear el enlace de WhatsApp
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+    
+    // Abrir WhatsApp en una nueva pestaña
+    window.open(url, "_blank");
+  }
+</script>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+        crossorigin="anonymous"></script>
+</body>
+</html>

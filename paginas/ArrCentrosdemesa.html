@@ -1,0 +1,764 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/estilos.css">
+    <title>Mey Detalles</title>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/assets/imgs/favicon_io/android-chrome-512x512.png" type="image/x-icon">
+
+    <meta name="theme-color" content="#7952b3">
+    <link href="carousel.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+      <!-- NAVBAR -->
+      <!-- contenedor donde se insertará el navbar -->
+    <div id="navbar-container"></div>
+
+        <script>
+          fetch('/navcat.html')
+            .then(response => response.text())
+            .then(data => {
+              document.getElementById('navbar-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error cargando el navbar:', error));
+        </script>
+    </header>
+
+<!-- Imagen principal tipo banner -->
+<section class="text-center mb-5">
+    <img src="https://drive.google.com/thumbnail?id=1xSqtux_ERt53OXJNlrYdeoHOfI81dPIS&sz=w2000" 
+         alt="Imagen principal" 
+         class="img-fluid w-100" 
+         style="object-fit: cover; max-height: 400px;">
+</section>
+
+<!-- Catálogo en Cards -->
+<section class="container">
+    <h2 class="text-center mb-4">Centros de Mesas</h2>
+  <div class="row g-4">
+
+      <!-- Modelo 1 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1_x8jchqkFZW1UQphiQrzoCROCtbPpqCb&sz=w2000" loading="lazy" class="card-img-top" alt="CentrodeMesa1">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 1</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 1', 'https://drive.google.com/thumbnail?id=1_x8jchqkFZW1UQphiQrzoCROCtbPpqCb&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 2 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1i4q9vh58rTJcbLqL72twCXa7FrCLD9BE&sz=w2000" loading="lazy" class="card-img-top" alt="CM2">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 2</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 2', 'https://drive.google.com/thumbnail?id=1i4q9vh58rTJcbLqL72twCXa7FrCLD9BE&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 3 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1WVGnVWG7JuwcA9y3ASdC6rUyacNtg6x1&sz=w2000" loading="lazy" class="card-img-top" alt="CM3">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 3</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 3', 'https://drive.google.com/thumbnail?id=1WVGnVWG7JuwcA9y3ASdC6rUyacNtg6x1&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 4 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1rvF5WwwwyLtu6BmwglpzuSdmumD0kDuv&sz=w2000" loading="lazy" class="card-img-top" alt="CM4">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 4</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 4', 'https://drive.google.com/thumbnail?id=1rvF5WwwwyLtu6BmwglpzuSdmumD0kDuv&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <br>
+
+  <div class="row g-4">
+
+      <!-- Modelo 5 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=15Q_ER_jhKHU4RSYmc3jMYpVTqlF6jjsM&sz=w2000" loading="lazy" class="card-img-top" alt="CM5">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 5</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 5', 'https://drive.google.com/thumbnail?id=15Q_ER_jhKHU4RSYmc3jMYpVTqlF6jjsM&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 6 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1c1LmzVPinijbyBScSVpgzDceFeXoogca&sz=w2000" loading="lazy" class="card-img-top" alt="CM6">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 6</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 6', 'https://drive.google.com/thumbnail?id=1c1LmzVPinijbyBScSVpgzDceFeXoogca&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 7 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=14ImM71K9rgZekCZfJkPRqohIA8JUEIGo&sz=w2000" loading="lazy" class="card-img-top" alt="CM7">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 7</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 7', 'https://drive.google.com/thumbnail?id=14ImM71K9rgZekCZfJkPRqohIA8JUEIGo&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 8 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1gcIyy4j81MKSqJv6nE1s7TnjHoIfiKzp&sz=w2000" loading="lazy" class="card-img-top" alt="CM8">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 8</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 8', 'https://drive.google.com/thumbnail?id=1gcIyy4j81MKSqJv6nE1s7TnjHoIfiKzp&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+  </div>
+
+    <br>
+
+  <div class="row g-4">
+
+      <!-- Modelo 9 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1Xm_jzk6Vxhq8yy5Qj0y2zVu6gtKDuv2x&sz=w2000" loading="lazy" class="card-img-top" alt="CM9">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 9</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 9', 'https://drive.google.com/thumbnail?id=1Xm_jzk6Vxhq8yy5Qj0y2zVu6gtKDuv2x&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 10 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1DnZg3DKMePAISAlJPtcFzKwDp-ZGtrVN&sz=w2000" loading="lazy" class="card-img-top" alt="CM10">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 10</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 10', 'https://drive.google.com/thumbnail?id=1DnZg3DKMePAISAlJPtcFzKwDp-ZGtrVN&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 11 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1i4QqHcC8TeIjuRZFbG1oGo3HxAOw7FJZ&sz=w2000" loading="lazy" class="card-img-top" alt="CM11">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 11</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 11', 'https://drive.google.com/thumbnail?id=1i4QqHcC8TeIjuRZFbG1oGo3HxAOw7FJZ&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 12 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1iEBnSEZtTP7o81JY83Jn7ts09ypAUKR5&sz=w2000" loading="lazy" class="card-img-top" alt="CM12">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 12</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 12', 'https://drive.google.com/thumbnail?id=1iEBnSEZtTP7o81JY83Jn7ts09ypAUKR5&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+  </div>
+    <br>
+
+  <div class="row g-4">
+
+      <!-- Modelo 13 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1CXyqkfHSmdVT4TgEMSjyKmhJG2gWJwPm&sz=w2000" loading="lazy" class="card-img-top" alt="CM13">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 13</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 13', 'https://drive.google.com/thumbnail?id=1CXyqkfHSmdVT4TgEMSjyKmhJG2gWJwPm&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 14 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1_EfZsGgj_4LDRJ9_4IxJBQgwk1J4PWPi&sz=w2000" loading="lazy" class="card-img-top" alt="CM14">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 14</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 14', 'https://drive.google.com/thumbnail?id=1_EfZsGgj_4LDRJ9_4IxJBQgwk1J4PWPi&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 15 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1L8uImu6CNfP8PS1giJWBSyQ8PuDEme1u&sz=w2000" loading="lazy" class="card-img-top" alt="CM15">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 15</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 15', 'https://drive.google.com/thumbnail?id=1L8uImu6CNfP8PS1giJWBSyQ8PuDEme1u&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 16 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1WFtcTD2Btt_wLV_21fcdeztmmiP8vLig&sz=w2000" loading="lazy" class="card-img-top" alt="CM16">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 16</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 16', 'https://drive.google.com/thumbnail?id=1WFtcTD2Btt_wLV_21fcdeztmmiP8vLig&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+  </div>
+    <br>
+
+  <div class="row g-4">
+
+      <!-- Modelo 17 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1s7Iktodun6MtRYg8cV0MBpyuj30CcyRX&sz=w2000" loading="lazy" class="card-img-top" alt="CM17">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 17</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 17', 'https://drive.google.com/thumbnail?id=1s7Iktodun6MtRYg8cV0MBpyuj30CcyRX&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 18 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1PlvS6eluy2lWK1cGLy5ITSwM3jB7kH-d&sz=w2000" loading="lazy" class="card-img-top" alt="CM18">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 18</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 18', 'https://drive.google.com/thumbnail?id=1PlvS6eluy2lWK1cGLy5ITSwM3jB7kH-d&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 19 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1VtsjO2jlB2XT_J95MF5NaBkVCAFtvv7I&sz=w2000" loading="lazy" class="card-img-top" alt="CM19">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 19</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 19', 'https://drive.google.com/thumbnail?id=1VtsjO2jlB2XT_J95MF5NaBkVCAFtvv7I&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 20 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1xkNi2pm5ZWVmjanxHoI5CfPx7Nd6Gt7z&sz=w2000" loading="lazy" class="card-img-top" alt="CM20">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 20</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 20', 'https://drive.google.com/thumbnail?id=1xkNi2pm5ZWVmjanxHoI5CfPx7Nd6Gt7z&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+  </div>
+    <br>
+
+  <div class="row g-4">
+
+      <!-- Modelo 21 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1Yx5gTbxj2OabF2O7RwqgkpY7W6aCo5CO&sz=w2000" loading="lazy" class="card-img-top" alt="CM21">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 21</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 21', 'https://drive.google.com/thumbnail?id=1Yx5gTbxj2OabF2O7RwqgkpY7W6aCo5CO&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 22 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1Ohz3bcQ0NvMJh3GKoq-fPLTkzazj2hpE&sz=w2000" loading="lazy" class="card-img-top" alt="CM22">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 22</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 22', 'https://drive.google.com/thumbnail?id=1Ohz3bcQ0NvMJh3GKoq-fPLTkzazj2hpE&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+            <!-- Modelo 23 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1zu4EHNwrwdC1kjqWS4uKT0A-jB-wNpnj&sz=w2000" loading="lazy" class="card-img-top" alt="CM23">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 23</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 23', 'https://drive.google.com/thumbnail?id=1zu4EHNwrwdC1kjqWS4uKT0A-jB-wNpnj&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 24 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=18thWxuJwaPZGyCnuNZ7cdvuV5kCigJ2H&sz=w2000" loading="lazy" class="card-img-top" alt="CM24">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 24</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 24', 'https://drive.google.com/thumbnail?id=18thWxuJwaPZGyCnuNZ7cdvuV5kCigJ2H&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+  </div>
+    <br>
+
+  <div class="row g-4">
+
+      <!-- Modelo 25 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1yXIRwuS_23RNrUtBn6ZNw5XvbLSzEDlH&sz=w2000" loading="lazy" class="card-img-top" alt="CM25">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 25</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de meesa 25', 'https://drive.google.com/thumbnail?id=1yXIRwuS_23RNrUtBn6ZNw5XvbLSzEDlH&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 26 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1XRnjwL5DBAPtM8b4jFX4Hmxj1MwDfhUc&sz=w2000" loading="lazy" class="card-img-top" alt="CM26">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 26</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 26', 'https://drive.google.com/thumbnail?id=1XRnjwL5DBAPtM8b4jFX4Hmxj1MwDfhUc&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 27 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1UycJPRXiZudi1930EeisNc8q4U62U771&sz=w2000" loading="lazy" class="card-img-top" alt="CM27">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 27</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 27', 'https://drive.google.com/thumbnail?id=1UycJPRXiZudi1930EeisNc8q4U62U771&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 28 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=17DPIsh7qjL8uIOT8poeYhXne2pe0naA8&sz=w2000" loading="lazy" class="card-img-top" alt="CM29">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 28</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 28', 'https://drive.google.com/thumbnail?id=17DPIsh7qjL8uIOT8poeYhXne2pe0naA8&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+  </div>
+    <br>
+
+  <div class="row g-4">
+
+      <!-- Modelo 29 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1prLd6Dtq4NIVv_oVkkU4_2Q6RaqJ09Tf&sz=w2000" loading="lazy" class="card-img-top" alt="CM29">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 29</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 29', 'https://drive.google.com/thumbnail?id=1prLd6Dtq4NIVv_oVkkU4_2Q6RaqJ09Tf&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 30 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1KNy9ea2fYuuBWGezHs3KSdYaGPyTr8Yn&sz=w2000" loading="lazy" class="card-img-top" alt="CM30">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 30</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 30', 'https://drive.google.com/thumbnail?id=1KNy9ea2fYuuBWGezHs3KSdYaGPyTr8Yn&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 31 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1rjgH9mdKKBhWcf9_tKXJlbIpL07r8qiy&sz=w2000" loading="lazy" class="card-img-top" alt="CM31">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 31</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 31', 'https://drive.google.com/thumbnail?id=1rjgH9mdKKBhWcf9_tKXJlbIpL07r8qiy&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 32 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=131k-cQCV-07iWCFcfaebQTH8dX3m6BuV&sz=w2000" loading="lazy" class="card-img-top" alt="CM32">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 32</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 32', 'https://drive.google.com/thumbnail?id=131k-cQCV-07iWCFcfaebQTH8dX3m6BuV&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+  </div>
+    <br>
+
+  <div class="row g-4">
+
+      <!-- Modelo 33 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1twznddEFZGxBgmmUu6TUmHUsjun-tlS4&sz=w2000" loading="lazy" class="card-img-top" alt="CM33">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 33</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 33', 'https://drive.google.com/thumbnail?id=1twznddEFZGxBgmmUu6TUmHUsjun-tlS4&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 34 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1oNYoIBkL9g1GzhlITXVzqa7Ai8am6c7G&sz=w2000" loading="lazy" class="card-img-top" alt="CM34">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 34</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 34', 'https://drive.google.com/thumbnail?id=1oNYoIBkL9g1GzhlITXVzqa7Ai8am6c7G&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 35 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1RvDIJiwaBrw9wrnQNbYf2D-bPSYx7nN7&sz=w2000" loading="lazy" class="card-img-top" alt="CM35">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 35</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 35', 'https://drive.google.com/thumbnail?id=1RvDIJiwaBrw9wrnQNbYf2D-bPSYx7nN7&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 36 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1betIHm59V54Jz6nmSTMKkfO5mf2NIjLp&sz=w2000" loading="lazy" class="card-img-top" alt="CM36">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 36</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 36', 'https://drive.google.com/thumbnail?id=1betIHm59V54Jz6nmSTMKkfO5mf2NIjLp&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+  </div>
+    <br>
+
+  <div class="row g-4">
+
+      <!-- Modelo 37 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1P2Bf-Wdn2xHRyMcQ-Q7eJr60Xr5293FC&sz=w2000" loading="lazy" class="card-img-top" alt="CM37">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 37</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 37', 'https://drive.google.com/thumbnail?id=1P2Bf-Wdn2xHRyMcQ-Q7eJr60Xr5293FC&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 38 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1h5GWsNeA6thDv4dFVFOLrVI6zQvf2qDN&sz=w2000" loading="lazy" class="card-img-top" alt="CM38">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 38</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 38', 'https://drive.google.com/thumbnail?id=1h5GWsNeA6thDv4dFVFOLrVI6zQvf2qDN&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 39 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1Mt4v9UQF1oj66Bygkz13b_95DHUfMx2u&sz=w2000" loading="lazy" class="card-img-top" alt="CM39">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 39</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 39', 'https://drive.google.com/thumbnail?id=1Mt4v9UQF1oj66Bygkz13b_95DHUfMx2u&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 40 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1pELfYeChjq_S43_s-vDHpCtlN43rKJ_t&sz=w2000" loading="lazy" class="card-img-top" alt="CM40">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 40</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 40', 'https://drive.google.com/thumbnail?id=1pELfYeChjq_S43_s-vDHpCtlN43rKJ_t&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+  </div>
+    <br>
+
+  <div class="row g-4">
+
+      <!-- Modelo 41 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1QLdA6RJzHP8jHdhD4fKzpo9rHSqKMbrP&sz=w2000" loading="lazy" class="card-img-top" alt="CM41">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 41</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 41', 'https://drive.google.com/thumbnail?id=1QLdA6RJzHP8jHdhD4fKzpo9rHSqKMbrP&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 42 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1agIhBPtJa56Bi6xQQpSBQ4Jbgxas3y6D&sz=w2000" loading="lazy" class="card-img-top" alt="CM42">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 42</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 42', 'https://drive.google.com/thumbnail?id=1agIhBPtJa56Bi6xQQpSBQ4Jbgxas3y6D&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 43 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1sk_F-EOTlD9iVOHVhVtOVnhAP51T6eY1&sz=w2000" loading="lazy" class="card-img-top" alt="CM43">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 43</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 43', 'https://drive.google.com/thumbnail?id=1sk_F-EOTlD9iVOHVhVtOVnhAP51T6eY1&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 44 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1rNvSj085Gchgj_sz4EKphKhAK2wRUqcP&sz=w2000" loading="lazy" class="card-img-top" alt="CM44">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 44</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 44', 'https://drive.google.com/thumbnail?id=1rNvSj085Gchgj_sz4EKphKhAK2wRUqcP&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+  </div>
+    <br>
+
+  <div class="row g-4">
+
+      <!-- Modelo 45 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1jPPsWfsuuPBZUVqLzR_wahWWZORXvlIa&sz=w2000" loading="lazy" class="card-img-top" alt="CM45">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 45</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 45', 'https://drive.google.com/thumbnail?id=1jPPsWfsuuPBZUVqLzR_wahWWZORXvlIa&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 46 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=15n3s2LReKRk8sA-5ZJi26KIp1kjyRGB_&sz=w2000" loading="lazy" class="card-img-top" alt="CM46">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Centro de mesa 46</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de mesa 46', 'https://drive.google.com/thumbnail?id=15n3s2LReKRk8sA-5ZJi26KIp1kjyRGB_&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 47 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1BRyEkrd9vSsCKTnL7aZ5ci07QfbVIiZp&sz=w2000"
+          loading="lazy" class="card-img-top" alt="Ofrendas 1">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Ofrendas 1</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Ofrendas 1', 'https://drive.google.com/thumbnail?id=1BRyEkrd9vSsCKTnL7aZ5ci07QfbVIiZp&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+  <div class="row g-4">
+
+
+</section>
+
+    <!-- Botón flotante WhatsApp -->
+      <div id="whatsapp-container"></div>
+
+      <script>
+        // Cargar el botón flotante con fetch
+        fetch('/whatsapp.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('whatsapp-container').innerHTML = data;
+          })
+          .catch(error => console.error('Error al cargar WhatsApp:', error));
+      </script>
+
+<!-- Footer -->
+<div id="footer-container"></div>
+<script>
+  fetch('../footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-container').innerHTML = data;
+    });
+</script>
+
+
+<script>
+  function enviarWhatsApp(modelo, imagenUrl) {
+    const numero = "593992638356"; // Tu número sin el "+"
+    
+    // Si la imagen ya es un enlace completo, úsala tal cual
+    const linkImagen = imagenUrl.startsWith("http") 
+      ? imagenUrl 
+      : window.location.origin + imagenUrl;
+
+    // Mensaje con formato bonito para WhatsApp
+    const mensaje = 
+      `(✿◡‿◡) *Hola, estoy interesado en el ${modelo}.*\n` +
+      `⚆_⚆ Puedes ver la imagen aquí:\n${linkImagen}`;
+
+    // Crear el enlace de WhatsApp
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+    
+    // Abrir WhatsApp en una nueva pestaña
+    window.open(url, "_blank");
+  }
+</script>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+        crossorigin="anonymous"></script>
+</body>
+</html>

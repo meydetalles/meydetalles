@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/estilos.css">
+    <title>Mey Detalles</title>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/assets/imgs/favicon_io/android-chrome-512x512.png" type="image/x-icon">
+
+    <meta name="theme-color" content="#7952b3">
+    <link href="carousel.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+      <!-- NAVBAR -->
+      <!-- contenedor donde se insertará el navbar -->
+    <div id="navbar-container"></div>
+
+        <script>
+          fetch('/navcat.html')
+            .then(response => response.text())
+            .then(data => {
+              document.getElementById('navbar-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error cargando el navbar:', error));
+        </script>
+    </header>
+
+<!-- Imagen principal tipo banner -->
+<section class="text-center mb-5">
+    <img src="https://drive.google.com/thumbnail?id=1VMToMoTUEoB9iewysxGJ4Q5kInlfM12y&sz=w2000"
+         alt="Imagen principal" 
+         class="img-fluid w-100" 
+         style="object-fit: cover; max-height: 400px;">
+</section>
+
+<!-- Catálogo en Cards -->
+<section class="container">
+    <h2 class="text-center mb-4">Decoracion para niño</h2>
+  <div class="row g-4">
+
+    <!-- Decoración 1 -->
+<section class="container my-5">
+
+
+  <div id="carouselDecoraciones1" class="carousel slide shadow rounded overflow-hidden" data-bs-ride="carousel">
+
+    <!-- IMÁGENES -->
+    <div class="carousel-inner">
+
+      <!-- ITEM 1 -->
+      <div class="carousel-item active">
+        <img
+          src="https://drive.google.com/thumbnail?id=1n6HPj2LEutIVuaG3zqkH4AOJREgI62nF&sz=w2000"
+          class="d-block w-100 img-carrusel-vertical"
+          alt="Decoración Religiosa Altar Especial">
+      </div>
+
+      <!-- ITEM 2 -->
+      <div class="carousel-item">
+        <img
+          src="https://drive.google.com/thumbnail?id=1i6OsJAMfbeHjkewgu3-9U_b1EJ-Rf3YI&sz=w2000"
+          class="d-block w-100 img-carrusel-vertical"
+          alt="Decoración Religiosa Iluminación">
+      </div>
+
+      <!-- ITEM 3 -->
+      <div class="carousel-item">
+        <img
+          src="https://drive.google.com/thumbnail?id=1qzUcVu4sjMCpBA5OAq08sqZRnKfKMONp&sz=w2000"
+          class="d-block w-100 img-carrusel-vertical"
+          alt="Decoración Religiosa Flores y Telón">
+      </div>
+    </div>
+
+    <!-- CONTROLES -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselDecoraciones1" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselDecoraciones1" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+
+  </div>
+
+  <!-- DECORACIÓN -->
+<div class="card mt-4 shadow-sm">
+    <div class="card-body text-center">
+      <h4 class="card-title">Decoración para niño #1 – La granja de Zenón</h4>
+      <p class="card-text">
+        Ambientación completa temática de granja con arco de globos orgánicos en tonos verde, blanco y marrón, fondo rústico iluminado con animales, sillón trono de heno y mesa principal con pastel y arreglos campiranos. ¡Ideal para fiestas infantiles llenas de diversión y fotos inolvidables!
+      </p>
+ 
+      <ul class="list-unstyled">
+        <li>🎈 Arco de globos orgánicos verde, blanco y marrón (vacas, cerditos y más)</li>
+        <li>👑 Sillón trono estilo heno con almohadones</li>
+        <li>🎂 Mesa principal decorada con pastel de granja</li>
+        <li>✨ Iluminación LED ambiental rústica</li>
+        <li>🌾 vegetales campiranos</li>
+        <li>🐄 Figuras gigantes de animales luminosos</li>
+      </ul>
+ 
+      <button class="btn btn-success"
+        onclick="enviarWhatsApp(
+         'Decoración La granja de Zenón #1 – Fiesta Infantil Alegre',
+         'https://drive.google.com/thumbnail?id=1n6HPj2LEutIVuaG3zqkH4AOJREgI62nF&sz=w2000'
+        )">
+        Cotizar por WhatsApp
+      </button>
+    </div>
+</div>
+
+</section>
+
+    <!-- Decoración 1-->
+
+<!-- Decoración 2 -->
+<section class="container my-5">
+    <h2 class="text-center mb-4">Decoración para niño #2</h2>
+  <div id="carouselDecoraciones2" class="carousel slide shadow rounded overflow-hidden" data-bs-ride="carousel">
+    
+    <!-- IMÁGENES -->
+    <div class="carousel-inner">
+
+      <!-- ITEM 1 -->
+      <div class="carousel-item active">
+        <img
+          src="https://drive.google.com/thumbnail?id=1j9mPQWkhbzJnCpxaIMTmVFgKa28ib44r&sz=w2000"
+          class="d-block w-100 img-carrusel-vertical"
+          alt="Decoración Religiosa Altar Especial">
+      </div>
+
+      <!-- ITEM 2 -->
+      <div class="carousel-item">
+        <img
+          src="https://drive.google.com/thumbnail?id=1eEV_nRo8Vg--gdbxQyFRJ42xqnTUKVHp&sz=w2000"
+          class="d-block w-100 img-carrusel-vertical"
+          alt="Decoración Religiosa Iluminación">
+      </div>
+
+    </div>
+
+    <!-- CONTROLES -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselDecoraciones2" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselDecoraciones2" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+
+  </div>
+
+<!-- DECORACIÓN 2 -->
+<div class="card mt-4 shadow-sm">
+    <div class="card-body text-center">
+      <h4 class="card-title">Decoración para niño #2 – Paw Patrol</h4>
+      <p class="card-text">
+        Ambientación completa temática Paw Patrol con arco de globos orgánicos en rojo, azul, amarillo y blanco, fondo con personajes iluminados, sillón trono de cachorros y mesa principal con pastel y accesorios aventureros. ¡Perfecta para cumpleaños infantiles llenos de acción y fotos épicas!
+      </p>
+ 
+      <ul class="list-unstyled">
+        <li>🎈 Arco de globos orgánicos rojo, azul, amarillo y blanco (con huellas)</li>
+        <li>👑 Sillón trono estilo cachorro Chase o Skye</li>
+        <li>🎂 Mesa principal decorada con pastel Paw Patrol</li>
+        <li>✨ Iluminación LED ambiental con efectos de rescate</li>
+        <li>🐶 Paneles personalizados de personajes gigantes</li>
+        <li>🚀 Figuras luminosas de Ryder y vehículos</li>
+      </ul>
+ 
+      <button class="btn btn-success"
+        onclick="enviarWhatsApp(
+         'Decoración Paw Patrol #2 – Fiesta Infantil Aventurera',
+         'https://drive.google.com/thumbnail?id=1j9mPQWkhbzJnCpxaIMTmVFgKa28ib44r&sz=w2000'
+        )">
+        Cotizar por WhatsApp
+      </button>
+    </div>
+</div>
+</section>
+ <br><br><br>
+ <!-- Decoración 2 -->
+
+ 
+      <!-- Modelo 1 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1LYizSiG5Vv7Y7TKRA4jt7t0VO1jwZBmd&sz=w2000" loading="lazy" class="card-img-top" alt="CajaDesayuno1">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Decoración para niño #3</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Decoración para niño #3', 'https://drive.google.com/thumbnail?id=1LYizSiG5Vv7Y7TKRA4jt7t0VO1jwZBmd&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 2 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1kIS_erBi9pA6QXKF5EFFDHt4Q1oFjP2T&sz=w2000" loading="lazy" class="card-img-top" alt="Desayuno2">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Decoración para niño #4</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Decoración para niño #4', 'https://drive.google.com/thumbnail?id=1kIS_erBi9pA6QXKF5EFFDHt4Q1oFjP2T&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 3 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1__pcFka7EcSMau-Ysd7lIRQrqGZU7XXU&sz=w2000" loading="lazy" class="card-img-top" alt="D3">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Decoración para niño #5</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Decoración para niño #5', 'https://drive.google.com/thumbnail?id=1__pcFka7EcSMau-Ysd7lIRQrqGZU7XXU&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modelo 4 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 text-center">
+          <img src="https://drive.google.com/thumbnail?id=1wyw2OLWEBZfG6btEdTmF4w5JhKkQwpn0&sz=w2000" loading="lazy" class="card-img-top" alt="D4">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">Decoración para niño #6</h5>
+            <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Decoración para niño #6', 'https://drive.google.com/thumbnail?id=1wyw2OLWEBZfG6btEdTmF4w5JhKkQwpn0&sz=w2000')">
+              Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <br>
+
+  <div class="row g-4">
+</section>
+
+    <!-- Botón flotante WhatsApp -->
+      <div id="whatsapp-container"></div>
+
+      <script>
+        // Cargar el botón flotante con fetch
+        fetch('/whatsapp.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('whatsapp-container').innerHTML = data;
+          })
+          .catch(error => console.error('Error al cargar WhatsApp:', error));
+      </script>
+
+<!-- Footer -->
+<div id="footer-container"></div>
+<script>
+  fetch('../footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-container').innerHTML = data;
+    });
+</script>
+
+
+<script>
+  function enviarWhatsApp(modelo, imagenUrl) {
+    const numero = "593992638356"; // Tu número sin el "+"
+    
+    // Si la imagen ya es un enlace completo, úsala tal cual
+    const linkImagen = imagenUrl.startsWith("http") 
+      ? imagenUrl 
+      : window.location.origin + imagenUrl;
+
+    // Mensaje con formato bonito para WhatsApp
+    const mensaje = 
+      `(✿◡‿◡) *Hola, estoy interesado en la ${modelo}.*\n` +
+      `⚆_⚆ Puedes ver la imagen aquí:\n${linkImagen}`;
+
+    // Crear el enlace de WhatsApp
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+    
+    // Abrir WhatsApp en una nueva pestaña
+    window.open(url, "_blank");
+  }
+</script>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+        crossorigin="anonymous"></script>
+</body>
+</html>
