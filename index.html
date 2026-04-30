@@ -272,7 +272,7 @@
 
       <script>
         // Cargar el botón flotante con fetch
-        fetch('whatsapp.html')
+        fetch('./whatsapp.html')
           .then(response => response.text())
           .then(data => {
             document.getElementById('whatsapp-container').innerHTML = data;
@@ -284,7 +284,7 @@
       <div id="footer-container"></div>
 
       <script>
-      fetch('footer.html')
+      fetch('./footer.html')
         .then(response => response.text())
         .then(data => {
           document.getElementById('footer-container').innerHTML = data;

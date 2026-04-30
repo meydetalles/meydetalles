@@ -23,7 +23,7 @@
     <div id="navbar-container"></div>
 
         <script>
-          fetch('/navcat.html')
+          fetch('../navcat.html')
             .then(response => response.text())
             .then(data => {
               document.getElementById('navbar-container').innerHTML = data;
