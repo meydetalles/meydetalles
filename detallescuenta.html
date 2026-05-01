@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Pagos - Mey Detalles</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+/* FONDO */
+body {
+  background: linear-gradient(135deg, #fff0f5, #f8f9fa);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* CONTENEDOR */
+.box {
+  background: #f1f1f1;
+  border-radius: 20px;
+  padding: 25px;
+}
+
+/* BOTONES DE BANCOS */
+.bank-btn {
+  border-radius: 15px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  background: white;
+  transition: 0.3s;
+}
+
+.bank-btn:hover {
+  transform: scale(1.05);
+}
+
+.bank-btn.active {
+  background: black;
+  color: white;
+}
+
+/* TARJETA INFO */
+.info-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* QR */
+.qr {
+  max-width: 200px;
+  margin: auto;
+  display: block;
+}
+
+/* BOTÓN */
+.btn-qr {
+  background: #e9ecef;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container my-5">
+
+  <div class="box">
+
+    <h4 class="fw-bold text-uppercase">
+      Selecciona tu banco preferido
+    </h4>
+
+    <p class="text-muted">
+      Elige tu banco o escanea el código QR para transferencias rápidas.
+    </p>
+
+    <!-- BOTONES -->
+    <div class="row text-center mt-4">
+
+      <div class="col-md-4 mb-3">
+        <button class="bank-btn w-100" onclick="mostrarBanco('deuna')">
+          <img src="assets/imgs/deuna.png" width="80"><br>
+          DeUna
+        </button>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <button class="bank-btn w-100" onclick="mostrarBanco('pichincha')">
+          <img src="assets/imgs/pichincha.png" width="80"><br>
+          Pichincha
+        </button>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <button class="bank-btn w-100" onclick="mostrarBanco('guayaquil')">
+          <img src="assets/imgs/guayaquil.png" width="80"><br>
+          Guayaquil
+        </button>
+      </div>
+
+    </div>
+
+    <!-- INFO -->
+    <div id="infoBanco" class="info-card text-center">
+
+      <h5>Selecciona un banco 👆</h5>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+
+function mostrarBanco(banco){
+
+  let contenido = "";
+
+  if(banco === "deuna"){
+    contenido = `
+      <h5>DeUna</h5>
+      <button class="btn btn-qr w-100 my-2">Ver Código QR</button>
+      <img src="assets/imgs/qr-deuna.png" class="qr">
+
+      <div class="row mt-3 text-start">
+        <div class="col-6"><b>Titular:</b><br>Aurelio Ivan Quito Alvarez</div>
+        <div class="col-6"><b>Tipo:</b><br>Ahorros</div>
+        <div class="col-6 mt-2"><b>Número:</b><br>7702743817</div>
+        <div class="col-6 mt-2"><b>CI:</b><br>0606169100</div>
+      </div>
+    `;
+  }
+
+  if(banco === "pichincha"){
+    contenido = `
+      <h5>Banco Pichincha</h5>
+      <button class="btn btn-qr w-100 my-2">Ver Código QR</button>
+      <img src="assets/imgs/qr-pichincha.png" class="qr">
+
+      <div class="row mt-3 text-start">
+        <div class="col-6"><b>Titular:</b><br>Aurelio Ivan Quito Alvarez</div>
+        <div class="col-6"><b>Tipo:</b><br>Ahorros</div>
+        <div class="col-6 mt-2"><b>Número:</b><br>XXXXXXX</div>
+        <div class="col-6 mt-2"><b>CI:</b><br>0606169100</div>
+      </div>
+    `;
+  }
+
+  if(banco === "guayaquil"){
+    contenido = `
+      <h5>Banco Guayaquil</h5>
+      <button class="btn btn-qr w-100 my-2">Ver Código QR</button>
+      <img src="assets/imgs/qr-guayaquil.png" class="qr">
+
+      <div class="row mt-3 text-start">
+        <div class="col-6"><b>Titular:</b><br>Aurelio Ivan Quito Alvarez</div>
+        <div class="col-6"><b>Tipo:</b><br>Ahorros</div>
+        <div class="col-6 mt-2"><b>Número:</b><br>0042575687</div>
+        <div class="col-6 mt-2"><b>CI:</b><br>0606169100</div>
+      </div>
+    `;
+  }
+
+  document.getElementById("infoBanco").innerHTML = contenido;
+}
+
+</script>
+
+</body>
+</html>

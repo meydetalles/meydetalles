@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Servicios - Mey Detalles</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/estilos.css">
+
+  <style>
+/* FONDO GENERAL */
+body {
+  background: linear-gradient(135deg, #fff0f5, #f8f9fa);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* TITULOS */
+h1, h2 {
+  font-weight: bold;
+  color: #444;
+}
+
+/* CARDS */
+.card {
+  border: none;
+  border-radius: 20px;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* EFECTO HOVER PRO */
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* EFECTO BRILLO */
+.card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
+  top: 0;
+  left: -100%;
+  transition: 0.5s;
+}
+
+.card:hover::before {
+  left: 100%;
+}
+
+/* ICONOS (EMOJIS MÁS GRANDES) */
+.card h5 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+/* TEXTO */
+.card p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* BOTONES */
+.btn-custom {
+  background: #ff4d6d;
+  color: white;
+  border-radius: 30px;
+  padding: 8px 20px;
+  transition: 0.3s;
+}
+
+.btn-custom:hover {
+  background: #e63950;
+}
+
+/* MAPA */
+.ratio iframe {
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* NAVBAR */
+.navbar {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* ANIMACIÓN SUAVE AL CARGAR */
+.card {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: aparecer 0.8s ease forwards;
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR SIMPLE -->
+<nav class="navbar navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="../index.html"><img class="img_logo" src="../assets/imgs/logo mey.png" alt="Logo mey detalles">⬅ Volver a inicio</a>
+    <!-- <a class="navbar-brand" href="../index.html">⬅ Volver a inicio</a> -->
+  </div>
+</nav>
+
+<!-- TÍTULO -->
+<div class="container my-5 text-center">
+  <h1>Nuestros Servicios</h1>
+  <p>En Mey Detalles hacemos realidad tus momentos especiales 💐</p>
+</div>
+
+<!-- SERVICIOS -->
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-4 mb-4">
+      <div class="card p-3 text-center">
+        <h5>🌸 Arreglos Florales</h5>
+        <p>Diseños personalizados para toda ocasión.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card p-3 text-center">
+        <h5>🎁 Detalles</h5>
+        <p>Regalos únicos para sorprender.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card p-3 text-center">
+        <h5>🎈 Decoraciones</h5>
+        <p>Eventos: bodas, cumpleaños, baby shower.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card p-3 text-center">
+        <h5>🪑 Alquiler de Mantelería</h5>
+        <p>Mesas, sillas y manteles elegantes.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card p-3 text-center">
+        <h5>🐻 Shows de Ositos</h5>
+        <p>Osito mariachi, show sorpresa y más.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card p-3 text-center">
+        <h5>🚗 Ramos Temáticos</h5>
+        <p>Hot Wheels y diseños personalizados.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- MAPA -->
+<section class="container my-5">
+  <h2 class="text-center mb-4">📍 Nuestra Ubicación</h2>
+
+  <div class="ratio ratio-16x9">
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d410.0828447880532!2d-78.9192749!3d-2.2913748!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d29b82e8a3fcc1%3A0x7a31342c234be1e9!2sMey%20%22Detalles%20%26%20Florister%C3%ADa%22!5e1!3m2!1ses-419!2sec!4v1777588650266!5m2!1ses-419!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+      <div id="footer-container"></div>
+
+      <script>
+      fetch('./footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-container').innerHTML = data;
+        });
+      </script>
+</body>
+</html>
