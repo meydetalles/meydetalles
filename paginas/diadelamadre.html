@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <!-- Favicon (mismo que el original) -->
+    <link rel="shortcut icon" href="../assets/imgs/favicon_io/android-chrome-512x512.png" type="image/x-icon">
+    
+    <title>Mey Detalles - Día de la Madre</title>
+    <meta name="theme-color" content="#7952b3">
+    
+    <!-- Estilos personalizados (incluye todo el CSS original + mejoras) -->
+    <style>
+        /* ===== CSS ORIGINAL PROPORCIONADO ===== */
+        .img_logo { width: 2em; height: 2em; }
+        .img_roadmap { width: 2em; height: 2em; }
+        .c_h1 { text-align: center; padding: 0.2em; font-family: 'Courier New', Courier, monospace; background: #1b263b; border-radius: 1em; margin: 0; }
+        .c_text { color: #ffffff; }
+        .bg-nav { background: #ffffff; }
+        h4 { text-align: center; padding: 1em; font-family: 'Courier New', Courier, monospace; background: #ffecf0; border-radius: 1em; }
+        
+        /* Pantalla de carga (no se usa pero se conserva) */
+        #loader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #fff; display: flex; justify-content: center; align-items: center; z-index: 9999; flex-direction: column; }
+        #loader img { width: 320px; animation: pulse 2s ease-in-out infinite, rotateFlowers 6s linear infinite; }
+        #loader p { margin-top: 15px; font-size: 18px; font-family: 'Courier New', Courier, monospace; color: #c2185b; letter-spacing: 2px; animation: fadeText 2s ease-in-out infinite alternate; }
+        @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.1); opacity: 1; } }
+        @keyframes rotateFlowers { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        @keyframes fadeText { 0% { opacity: 0.3; } 100% { opacity: 1; } }
+        .hidden { opacity: 0; visibility: hidden; transition: opacity 1s ease, visibility 1s ease; }
+        #content { display: none; }
+        
+        .bodycartas { font-family: 'Courier New', Courier, monospace; display: flex; justify-content: center; margin: 20px; }
+        .carrusel { width: 95%; overflow: hidden; position: relative; display: flex; align-items: center; }
+        .contenedor-cartas { display: flex; transition: transform 0.6s ease; align-items: center; cursor: grab; }
+        .carta { flex: 0 0 100px; height: 140px; background: #e289df54; border-radius: 10px; margin: 0 7.5px; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 18px; transition: all 0.6s ease; user-select: none; }
+        .carta.activa { flex: 0 0 160px; height: 220px; background: #f7bbf5; color: rgba(174, 124, 124, 0.882); font-size: 24px; z-index: 10; box-shadow: 0 4px 15px rgb(0, 0, 0); }
+        button { background: transparent; border: none; color: rgba(0, 0, 0, 0.5); font-size: 28px; padding: 5px 10px; cursor: pointer; user-select: none; transition: color 0.3s ease; }
+        button:hover { color: rgba(0, 0, 0, 0.9); }
+        .svg { width: 1em; height: 1em; }
+        em { font-size: 0.8em; }
+        link { text-decoration: none; color: inherit; }
+        .fondocat { background: #f3eada2a; border-radius: 1em; padding: 0.1em; margin: 0; }
+        .bordecat { border: 2px solid #1b263b; border-radius: 1em; padding: 0.5em; margin: 0; }
+        .lineadivider { border-top: 2px solid #f3ca84; margin: 0; }
+        .item_navc { margin: 0.2em; padding: 0.2em; height: 100%; width: 100%; font-size: 1em; font-weight: bold; background: #cddbf4; border-radius: 1em; font-family: 'Courier New', Courier, monospace; }
+        .esp { margin-top: 1.5em; }
+        .colornav { font-weight: bold; font-family: 'Courier New', Courier, monospace; }
+        
+        /* Hover en imágenes y tarjetas */
+        .card { transition: transform 0.3s, box-shadow 0.3s; cursor: pointer; padding-bottom: 0.5em; border-radius: 1em; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgb(93, 187, 120); }
+        .card-img-top { transition: transform 0.4s ease; border-radius: 1em 1em 0 0; }
+        .card-img-top:hover { transform: scale(1.05); }
+        
+        /* Botón WhatsApp */
+        .btn-whatsapp { background-color: #25D366; border-color: #25D366; transition: background-color 0.3s, transform 0.3s; }
+        .btn-whatsapp:hover { background-color: #1ebe57; transform: scale(1.05); }
+        
+        .img-carrusel-vertical { max-height: 80vh; object-fit: contain; background-color: #000; }
+        .img-carrusel-vertical:hover { transform: scale(1.05); transition: transform 0.3s ease; }
+        .card-title { font-size: 1.2em; font-weight: bold; }
+        
+        /* ===== MEJORAS ADICIONALES PARA DÍA DE LA MADRE ===== */
+        .titulo-madre {
+            background: #ffecf0;
+            border-radius: 1em;
+            padding: 0.6rem 1.5rem;
+            display: inline-block;
+            font-family: 'Courier New', Courier, monospace;
+            letter-spacing: 1px;
+        }
+        .intro-texto {
+            font-size: 1.2rem;
+            color: #4a2c2c;
+            background: #fffaf2;
+            display: inline-block;
+            padding: 0.5rem 2rem;
+            border-radius: 2rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+        .banner-wrapper {
+            position: relative;
+        }
+        .banner-credit {
+            font-size: 0.8rem;
+            text-align: center;
+            margin-top: 0.5rem;
+            color: #aaa;
+        }
+        h2.section-title {
+            border-left: 5px solid #f3ca84;
+            background: #fff5e8;
+            padding: 0.6rem 1rem;
+            border-radius: 1rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            display: inline-block;
+            width: auto;
+        }
+        .bg-soft {
+            background: #fef9f0;
+            border-radius: 1.5rem;
+            padding: 0.2rem 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <!-- Navbar externo -->
+    <div id="navbar-container"></div>
+    <script>
+        fetch('../navcat.html')
+            .then(response => response.text())
+            .then(data => { document.getElementById('navbar-container').innerHTML = data; })
+            .catch(error => console.error('Error cargando navbar:', error));
+    </script>
+</header>
+
+<!-- BANNER PRINCIPAL DÍA DE LA MADRE -->
+<section class="text-center mb-4">
+    <img src="https://drive.google.com/thumbnail?id=1tx-4H7SDKndGr7kj2VQQy7lDxxU9PXvX&sz=w2000"
+         alt="Banner Día de la Madre" 
+         class="img-fluid w-100" 
+         style="object-fit: cover; max-height: 400px;">
+    <div class="mt-3">
+        <h1 class="display-5 fw-bold titulo-madre">🌷 Día de la Madre 🌷</h1>
+    </div>
+</section>
+
+<!-- Texto introductorio centrado -->
+<div class="container text-center my-4">
+    <p class="intro-texto lead">
+        ✨ Celebra a mamá con nuestros arreglos especiales ✨<br>
+        Flores, frutas, desayunos y regalos únicos hechos con amor.
+    </p>
+</div>
+
+<!-- CATÁLOGO DE PRODUCTOS PARA EL DÍA DE LA MADRE -->
+<section class="container my-5">
+    <div class="text-center mb-5">
+        <h2 class="section-title">🌸 Productos para el Día de la Madre 🌸</h2>
+    </div>
+
+    <!-- Decoración 1-->
+
+<!-- Decoración 2 -->
+<section class="container my-5">
+    <h2 class="text-center mb-4">Combo Madre #1</h2>
+
+  <div id="carouselDecoraciones2" class="carousel slide shadow rounded overflow-hidden" data-bs-ride="carousel">
+    
+    <!-- IMÁGENES -->
+    <div class="carousel-inner">
+
+      <!-- ITEM 1 -->
+      <div class="carousel-item active">
+        <img
+          src="https://drive.google.com/thumbnail?id=1rLPlJhB__88C6pRDkC5XrjT7ojfbVV_V&sz=w2000"
+          class="d-block w-100 img-carrusel-vertical"
+          alt="Decoración Religiosa Altar Especial">
+      </div>
+
+      <!-- ITEM 2 -->
+      <div class="carousel-item">
+        <img
+          src="https://drive.google.com/thumbnail?id=1cpEOb7KbmWRShqrciIjf6fKApCYUwTkj&sz=w2000"
+          class="d-block w-100 img-carrusel-vertical"
+          alt="Decoración Religiosa Iluminación">
+      </div>
+ <!-- ITEM 3 -->
+    <div class="carousel-item">
+        <img
+          src="https://drive.google.com/thumbnail?id=1xz0rz35ZqP8S5KPEjfMyZzGFQNFhGPxH&sz=w2000"
+          class="d-block w-100 img-carrusel-vertical"
+          alt="Decoración Religiosa Iluminación">
+      </div>
+    </div>
+
+    <!-- CONTROLES -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselDecoraciones2" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselDecoraciones2" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+
+  </div>
+
+  <!-- DESCRIPCIÓN ABAJO -->
+<div class="card mt-4 shadow-sm">
+    <div class="card-body text-center">
+      <h4 class="card-title">Combo Madre #1</h4>
+      <p class="card-text">
+        Sorprende a mamá con este combo exclusivo que incluye:
+      </p>
+
+      <ul class="list-unstyled">
+        <li>🌸 Detalles peronalizados</li>
+        <li>✨ Show sorpresa y emociones</li>
+        <li>🌿 Serenatas en vivo</li>
+        <li> Agenda tu cita</li>
+      </ul>
+      <button class="btn btn-success"
+      onclick="enviarWhatsApp(
+        'Combo Madre #1',
+        'https://drive.google.com/thumbnail?id=1rLPlJhB__88C6pRDkC5XrjT7ojfbVV_V&sz=w2000'
+      )">
+      Cotizar por WhatsApp
+      </button>
+    </div>
+  </div>
+
+</section>
+ <br><br>
+    <!-- FILA 1 (4 productos) -->
+    <div class="row g-4">
+        <!-- Producto 1 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card shadow-sm h-100 text-center">
+                <img src="https://drive.google.com/thumbnail?id=1cpEOb7KbmWRShqrciIjf6fKApCYUwTkj&sz=w2000" loading="lazy" class="card-img-top" alt="Ramo Eterno Rosas">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <h5 class="card-title">Día de la madre 1#</h5>
+                    <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Dia de la madre 1#', 'https://drive.google.com/thumbnail?id=1cpEOb7KbmWRShqrciIjf6fKApCYUwTkj&sz=w2000')">
+                        Enviar a WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Producto 2 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card shadow-sm h-100 text-center">
+                <img src="https://drive.google.com/thumbnail?id=1Uefonpiyk4kTzgPk9dAu7AQ_1ZfESIA7&sz=w2000" loading="lazy" class="card-img-top" alt="Centro de Mesa Orquídeas">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <h5 class="card-title">Día de la madre 2#</h5>
+                    <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Dia de la madre 2#', 'https://drive.google.com/thumbnail?id=1Uefonpiyk4kTzgPk9dAu7AQ_1ZfESIA7&sz=w2000')">
+                        Enviar a WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Producto 3 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card shadow-sm h-100 text-center">
+                <img src="https://drive.google.com/thumbnail?id=17pRDFq4RkMhmAtXxOaqDTE-vTsvWCVb0&sz=w2000" loading="lazy" class="card-img-top" alt="Canasta de Frutas Exóticas">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <h5 class="card-title">Día de la madre 3#</h5>
+                    <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Día de la madre 3#', 'https://drive.google.com/thumbnail?id=17pRDFq4RkMhmAtXxOaqDTE-vTsvWCVb0&sz=w2000')">
+                        Enviar a WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Producto 4 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card shadow-sm h-100 text-center">
+                <img src="https://drive.google.com/thumbnail?id=1PCt4Ksr-mT0-EF9XCqSBFgrb86lEksw3&sz=w2000" loading="lazy" class="card-img-top" alt="Desayuno Sorpresa con Flores">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <h5 class="card-title">Día de la madre 4#</h5>
+                    <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Día de la madre 4#', 'https://drive.google.com/thumbnail?id=1PCt4Ksr-mT0-EF9XCqSBFgrb86lEksw3&sz=w2000')">
+                        Enviar a WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FILA 2 -->
+    <div class="row g-4 mt-2">
+        <!-- Producto 5 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card shadow-sm h-100 text-center">
+                <img src="https://drive.google.com/thumbnail?id=1xz0rz35ZqP8S5KPEjfMyZzGFQNFhGPxH&sz=w2000" loading="lazy" class="card-img-top" alt="Caja de Mimos y Dulces">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <h5 class="card-title">Día de la madre 5#</h5>
+                    <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Día de la madre 5#', 'https://drive.google.com/thumbnail?id=1xz0rz35ZqP8S5KPEjfMyZzGFQNFhGPxH&sz=w2000')">
+                        Enviar a WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Producto 6 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card shadow-sm h-100 text-center">
+                <img src="https://drive.google.com/thumbnail?id=13F3ucZyoUCT1GSdvaNUXBFb7qJSdtjPR&sz=w2000" loading="lazy" class="card-img-top" alt="Marco Personalizado Mamá">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <h5 class="card-title">Día de la madre 6#</h5>
+                    <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Día de la madre 6#', 'https://drive.google.com/thumbnail?id=13F3ucZyoUCT1GSdvaNUXBFb7qJSdtjPR&sz=w2000')">
+                        Enviar a WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Producto 7 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card shadow-sm h-100 text-center">
+                <img src="https://drive.google.com/thumbnail?id=1pbVUBp_n_b6HySFTlep-PA7W9hDEda2f&sz=w2000" loading="lazy" class="card-img-top" alt="Mini Jardín Suculentas">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <h5 class="card-title">Día de la madre 7#</h5>
+                    <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Día de la madre 7#', 'https://drive.google.com/thumbnail?id=1pbVUBp_n_b6HySFTlep-PA7W9hDEda2f&sz=w2000')">
+                        Enviar a WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Producto 8 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card shadow-sm h-100 text-center">
+                <img src="https://drive.google.com/thumbnail?id=1ckKGy7QozYEQ3bu30c86dEPH7wDfAPnb&sz=w2000" loading="lazy" class="card-img-top" alt="Hamaca de Frutas Tropicales">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <h5 class="card-title">Día de la madre 8#</h5>
+                    <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Día de la madre 8#', 'https://drive.google.com/thumbnail?id=1ckKGy7QozYEQ3bu30c86dEPH7wDfAPnb&sz=w2000')">
+                        Enviar a WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FILA 3 -->
+    <div class="row g-4 mt-2">
+        <!-- Producto 9 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card shadow-sm h-100 text-center">
+                <img src="https://drive.google.com/thumbnail?id=1QtMQjGrNZFGTuveWWdAPL4QQiyn1oHKO&sz=w2000" loading="lazy" class="card-img-top" alt="Arreglo Floral Corazón">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <h5 class="card-title">Día de la madre 9#</h5>
+                    <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Día de la madre 9#', 'https://drive.google.com/thumbnail?id=1QtMQjGrNZFGTuveWWdAPL4QQiyn1oHKO&sz=w2000')">
+                        Enviar a WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Producto 10 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card shadow-sm h-100 text-center">
+                <img src="https://drive.google.com/thumbnail?id=100BM6DHdtIPK9iG28aQxyzndRL0YtR1S&sz=w2000" loading="lazy" class="card-img-top" alt="Cesta de Té y Galletas">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <h5 class="card-title">Día de la madre 10#</h5>
+                    <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Día de la madre 10#', 'https://drive.google.com/thumbnail?id=100BM6DHdtIPK9iG28aQxyzndRL0YtR1S&sz=w2000')">
+                        Enviar a WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Producto 11 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card shadow-sm h-100 text-center">
+                <img src="https://drive.google.com/thumbnail?id=1lSRxT3Ejemj9Ju_HUdhrhU8ulNcsKIdn&sz=w2000" loading="lazy" class="card-img-top" alt="Pulsera Artesanal con Initial">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <h5 class="card-title">Día de la madre 11#</h5>
+                    <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Día de la madre 11#', 'https://drive.google.com/thumbnail?id=1lSRxT3Ejemj9Ju_HUdhrhU8ulNcsKIdn&sz=w2000')">
+                        Enviar a WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Producto 12 -->
+        <!-- <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card shadow-sm h-100 text-center">
+                <img src="https://placehold.co/400x300/cfe5cf/528a3e?text=Maceta+Amor" loading="lazy" class="card-img-top" alt="Maceta Decorada Amor">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <h5 class="card-title">🌸 Maceta Decorada "Amor"</h5>
+                    <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Maceta Decorada Amor', 'https://placehold.co/400x300/cfe5cf/528a3e?text=Maceta+Amor')">
+                        Enviar a WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- FILA 4 -->
+    <div class="row g-4 mt-2">
+        <!-- Producto 13 -->
+        <!-- <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card shadow-sm h-100 text-center">
+                <img src="https://placehold.co/400x300/ead8ef/926aa6?text=Álbum+Recuerdos" loading="lazy" class="card-img-top" alt="Álbum de Fotos Recuerdos">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <h5 class="card-title">📸 Álbum de Fotos Recuerdos</h5>
+                    <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Álbum de Fotos Recuerdos', 'https://placehold.co/400x300/ead8ef/926aa6?text=Álbum+Recuerdos')">
+                        Enviar a WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div> -->
+        <!-- Producto 14 -->
+        <!-- <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card shadow-sm h-100 text-center">
+                <img src="https://placehold.co/400x300/fce1bd/c27833?text=Velas+Aromáticas" loading="lazy" class="card-img-top" alt="Set de Velas Aromáticas">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <h5 class="card-title">🕯️ Set de Velas Aromáticas</h5>
+                    <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Set de Velas Aromáticas', 'https://placehold.co/400x300/fce1bd/c27833?text=Velas+Aromáticas')">
+                        Enviar a WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div> -->
+        <!-- Producto 15 -->
+        <!-- <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card shadow-sm h-100 text-center">
+                <img src="https://placehold.co/400x300/f2dc91/b3882c?text=Ramo+Girasoles" loading="lazy" class="card-img-top" alt="Ramo de Girasoles">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <h5 class="card-title">🌻 Ramo de Girasoles</h5>
+                    <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Ramo de Girasoles', 'https://placehold.co/400x300/f2dc91/b3882c?text=Ramo+Girasoles')">
+                        Enviar a WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div> -->
+        <!-- Producto 16 -->
+        <!-- <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card shadow-sm h-100 text-center">
+                <img src="https://placehold.co/400x300/f4cfdf/b5486b?text=Centro+Frutal" loading="lazy" class="card-img-top" alt="Centro de Mesa Frutal">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <h5 class="card-title">🍊 Centro de Mesa Frutal</h5>
+                    <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Centro de Mesa Frutal', 'https://placehold.co/400x300/f4cfdf/b5486b?text=Centro+Frutal')">
+                        Enviar a WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- FILA 5 (últimos 4 productos) -->
+    <div class="row g-4 mt-2">
+        <!-- Producto 17 -->
+        <!-- <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card shadow-sm h-100 text-center">
+                <img src="https://placehold.co/400x300/cae5c0/477a33?text=Desayuno+Fitness" loading="lazy" class="card-img-top" alt="Desayuno Fitness para Mamá">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <h5 class="card-title">🥑 Desayuno Fitness para Mamá</h5>
+                    <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Desayuno Fitness para Mamá', 'https://placehold.co/400x300/cae5c0/477a33?text=Desayuno+Fitness')">
+                        Enviar a WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div> -->
+        <!-- Producto 18 -->
+        <!-- <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card shadow-sm h-100 text-center">
+                <img src="https://placehold.co/400x300/f7c8d4/b83b5e?text=Caja+Bombones" loading="lazy" class="card-img-top" alt="Caja de Bombones y Flores">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <h5 class="card-title">🍫 Caja de Bombones y Flores</h5>
+                    <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Caja de Bombones y Flores', 'https://placehold.co/400x300/f7c8d4/b83b5e?text=Caja+Bombones')">
+                        Enviar a WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div> -->
+        <!-- Producto 19 -->
+        <!-- <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card shadow-sm h-100 text-center">
+                <img src="https://placehold.co/400x300/dad0e8/674ea7?text=Cuadro+Personalizado" loading="lazy" class="card-img-top" alt="Cuadro Personalizado">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <h5 class="card-title">🖌️ Cuadro Personalizado</h5>
+                    <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Cuadro Personalizado', 'https://placehold.co/400x300/dad0e8/674ea7?text=Cuadro+Personalizado')">
+                        Enviar a WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div> -->
+        <!-- Producto 20 -->
+        <!-- <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card shadow-sm h-100 text-center">
+                <img src="https://placehold.co/400x300/a9e0db/2c8e7a?text=Kit+Spa+Casero" loading="lazy" class="card-img-top" alt="Kit de Spa Casero">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <h5 class="card-title">🧴 Kit de Spa Casero</h5>
+                    <button class="btn btn-success btn-whatsapp mt-2" onclick="enviarWhatsApp('Kit de Spa Casero', 'https://placehold.co/400x300/a9e0db/2c8e7a?text=Kit+Spa+Casero')">
+                        Enviar a WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</section>
+
+<!-- Botón flotante WhatsApp (cargado desde archivo externo) -->
+<div id="whatsapp-container"></div>
+<script>
+    fetch('../whatsapp.html')
+        .then(response => response.text())
+        .then(data => { document.getElementById('whatsapp-container').innerHTML = data; })
+        .catch(error => console.error('Error al cargar WhatsApp:', error));
+</script>
+
+<!-- Footer -->
+<div id="footer-container"></div>
+<script>
+    fetch('../footer.html')
+        .then(response => response.text())
+        .then(data => { document.getElementById('footer-container').innerHTML = data; })
+        .catch(error => console.error('Error cargando footer:', error));
+</script>
+
+<!-- Función WhatsApp (idéntica a la original) -->
+<script>
+    function enviarWhatsApp(modelo, imagenUrl) {
+        const numero = "593992638356";
+        const linkImagen = imagenUrl.startsWith("http") ? imagenUrl : window.location.origin + imagenUrl;
+        const mensaje = 
+            `(✿◡‿◡) *Hola, estoy interesado en el ${modelo} para el Día de la Madre.*\n` +
+            `⚆_⚆ Puedes ver la imagen aquí:\n${linkImagen}`;
+        const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+        window.open(url, "_blank");
+    }
+</script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+        crossorigin="anonymous"></script>
+</body>
+</html>
